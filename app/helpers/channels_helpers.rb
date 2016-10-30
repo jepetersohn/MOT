@@ -9,8 +9,9 @@ helpers do
     total_cost.reduce(:+)
   end
 
-  def current_user
-    @_cached_user ||= User.find(session[:user_id]) if logged_in?
+
+  def currently_subscribed?
+    current_user.channels.include?(Channel.find_by(id: params[:id] ))
   end
 
 end
