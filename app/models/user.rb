@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   validates :hashed_password, :length => { minimum: 4}
   validate :validate_password_length
 
+  has_many :subscriptions
+  has_many :channels, through: :subscriptions
+
   def password
     @password ||= BCrypt::Password.new(hashed_password)
   end
