@@ -1,3 +1,7 @@
+h1 {
+  margin-left: 20px;
+}
+
 .container {
   margin: 20px auto;
   width: 800px;
@@ -72,4 +76,28 @@ form.quirks {
   text-align: right;
   margin-right: 20px;
   width: 200px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
 }
