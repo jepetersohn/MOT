@@ -1,9 +1,13 @@
 <ul>
   <%@channels.each do |channel|%>
   <li>
-    <%=channel.name%>
+    <a href="/channels/<%=channel.id%>">
+      <%=channel.name%>
+    </a>
     <%=channel.callsign%>
-    <%=channel.price_per_month%>
+    $<%=channel.price_per_month%>
   </li>
+  <br>
+  <hr>
   <%end%>
 </ul>

@@ -1,1 +1,14 @@
-<h1>Profile for <%=@user.first_name%></h1>
+<h1>Profile for <%=@user.first_name%> <%=@user.last_name%></h1>
+<hr>
+<br>
+<h3>Your current lineup:</h3>
+<%@user.channels.each do |channel|%>
+  <a href="/channels/<%=channel.id%>">
+    <%=channel.name%>
+  </a>
+  <%=channel.callsign%>
+  $<%=channel.price_per_month%>
+  <br>
+<%end%>
+<br>
+Your total monthly bill: $<%=monthly_total%>
