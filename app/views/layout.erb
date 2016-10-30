@@ -10,6 +10,31 @@
   <title></title>
 </head>
 <body>
-  <%= yield %>
+
+  <ul>
+  <li><a class="active" href="/channels">View all channels</a></li>
+  <% if logged_in?%>
+    <li>
+      <form action="/sessions" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input id="logout" type="submit" value="logout">
+      </form>
+    </li>
+    <li><a href="/users/<%=current_user.id%>"><%=current_user.username%></a></li>
+  <%else%>
+    <li><a href="/users/new">Register</a></li>
+    <li><a href="/sessions/new">Login</a></li>
+  <%end%>
+
+</ul>
+ <header>
+    <h1>
+      TV à la carte
+    </h1>
+  </header>
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
+
 </html>
