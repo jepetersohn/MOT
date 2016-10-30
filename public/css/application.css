@@ -1,12 +1,32 @@
+html {
+  background-image: url("http://ministry127.com/sites/default/files/Television%20Viewing-background.jpg");
+}
+
 h1 {
-  margin-left: 20px;
+  text-align: right;
+  margin-right:120px;
+  color: white;
+}
+
+p {
+  text-align: center;
+}
+
+h3 {
+  color: white;
+}
+
+li {
+  color: white;
 }
 
 .container {
   margin: 20px auto;
-  width: 800px;
+  margin-left: 100px;
+  margin-bottom: 100px;
+  width: 700px;
+  height: 430px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
 }
 
 .container h1 {
@@ -104,8 +124,8 @@ div.nav li a:hover {
 
 
 div#channels {
-  background-color: white;
-  color: black;
+  background-color: none;
+  color: white;
 }
 
 

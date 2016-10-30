@@ -1,11 +1,18 @@
 <div id="channels">
+  <%if logged_in?%>
+    <h3>Click on a channel to view its details and to edit your subscriptions.</h3>
+  <%else%>
+    <h1>Click on a channel to view its details.</h1>
+  <%end%>
+  <hr>
   <ul>
     <%@channels.each do |channel|%>
     <li>
       <a href="/channels/<%=channel.id%>">
         <%=channel.name%> (<%=channel.callsign%>)
       </a>
-      $<%=channel.price_per_month%>
+        &emsp; &emsp; Monthly price:
+        $<%=channel.price_per_month%>
     </li>
     <br>
     <%end%>

@@ -1,16 +1,19 @@
-<h1>Log in to your account<h1>
-<% if @message %>
-  <%= @message %>
-<% end %>
-
-<%= erb(:errors) %>
-
-<form action="/sessions" method="post">
-  <label for "email">Email:</label>
-  <input type="text" name="email"/>
+<div id="channels">
+  <% if @message %>
+    <%= @message %>
+  <% end %>
   <br>
-  <label for="password">Password:</label>
-  <input type="password" name="password"/>
-  <br>
-  <input type="submit" value="Login">
-</form>
+  <h2>Log in to your account</h2>
+
+  <%= erb(:errors) %>
+
+  <form action="/sessions" method="post">
+    <label for "email">Email:</label>
+    <input type="text" name="email"/>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password"/>
+    <br>
+    <input type="submit" value="Login">
+  </form>
+</div>
