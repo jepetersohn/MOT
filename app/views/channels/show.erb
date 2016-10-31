@@ -12,15 +12,17 @@
   <%if logged_in?%>
     <%if currently_subscribed?%>
         <form action="/subscriptions" method="POST">
-        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="_method" value="delete"> <!-- indent this line -->
           <input type="hidden" name="subscription[channel_id]" value="<%=@channel.id%>">
           <input type="hidden" name="subscription[user_id]" value="<%=current_user.id%>">
+          <!-- instead of baking the user_id into the form, use the current_user's id in the controller -->
           <input type="submit" value="Unsubscribe from this channel">
         </form>
     <%else%>
         <form action="/subscriptions" method="POST">
           <input type="hidden" name="subscription[channel_id]" value="<%=@channel.id%>">
           <input type="hidden" name="subscription[user_id]" value="<%=current_user.id%>">
+          <!-- instead of baking the user_id into the form, use the current_user's id in the controller -->
           <input type="submit" value="Subscribe to this channel">
         </form>
     <%end%>

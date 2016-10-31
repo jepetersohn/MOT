@@ -4,7 +4,7 @@ post '/subscriptions' do
     redirect "/users/#{current_user.id}"
   else
     @errors = @subscription.errors.full_messages
-    erb :"/users/show"
+    erb :"/users/show" # no leading slash
   end
 end
 
@@ -20,4 +20,12 @@ delete '/subscriptions' do
   else
     erb :'not_authorized'
   end
+  # excellent security check. consider combining your conditionals for brevity:
+  # if logged_in? && current_user.id == @subscription.user.id
+  #     @subscription.destroy
+  #     redirect "/users/#{current_user.id}"
+  # else
+  #   erb :'not_authorized'
+  # end
+
 end
