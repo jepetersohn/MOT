@@ -1,5 +1,7 @@
 post '/subscriptions' do
-  @subscription = Subscription.new(params[:subscription])
+  subscription_hash = params[:subscription]
+  subscription_hash[:user_id] = current_user.id
+  @subscription = Subscription.new(subscription_hash)
   if @subscription.save
     redirect "/users/#{current_user.id}"
   else
