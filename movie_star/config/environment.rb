@@ -3,5 +3,7 @@ require File.expand_path('../application', __FILE__)
 
 require 'faker'
 
+require 'bcrypt'
+
 # Initialize the Rails application.
 Rails.application.initialize!
