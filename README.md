@@ -2,7 +2,7 @@
 Dev Bootcamp client project for movie reviews web app
 
 team name: Adventure Time
-team members: Joan Petersohn, Woleeta Canon, Justin Frederick, Dennis Marchetti
+team members: Joan Petersohn, Waleeta Canon, Justin Frederick, Dennis Marchetti
 
 user stories:
 
