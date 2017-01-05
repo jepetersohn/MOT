@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170104223053) do
+ActiveRecord::Schema.define(version: 20170105163503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,14 +23,16 @@ ActiveRecord::Schema.define(version: 20170104223053) do
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string   "title",       null: false
+    t.string   "title",                                                                                         null: false
     t.integer  "year"
     t.string   "actors"
     t.integer  "runtime"
     t.string   "plot"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                                                                                    null: false
+    t.datetime "updated_at",                                                                                    null: false
+    t.string   "url"
+    t.string   "img",         default: "http://hdimagesnew.com/wp-content/uploads/2016/09/image-not-found.jpg"
   end
 
   create_table "ratings", force: :cascade do |t|

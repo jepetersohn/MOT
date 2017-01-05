@@ -1,2 +1,12 @@
+<h1>Top 50 Films</h1>
 
-hi
+<ul>
+  <% @movies.each do |movie| %>
+    <li><%=movie.title%></li>
+    <a href = "<%=movie.url%>">
+    <img src="<%=movie.img%>" alt = "<%=movie.title%>" style="width:182px;height:268px;border:0;">
+    </a>
+  <% end %>
+</ul>
+
+

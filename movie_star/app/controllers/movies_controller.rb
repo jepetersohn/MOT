@@ -1,6 +1,11 @@
-class MoviesController < ActionController::Base
-  protect_from_forgery with: :exception
+class MoviesController < ApplicationController
+
   def index
-    #@movies = Movie.all.sort.first(50)
+    @movies = Movie.all.sort.first(50)
   end
+
+  def show
+  	@movie = Movie.find_by(id: params[:id])
+  end
+
 end
