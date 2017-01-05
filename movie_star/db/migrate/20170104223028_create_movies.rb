@@ -2,7 +2,7 @@ class CreateMovies < ActiveRecord::Migration
   def change
     create_table :movies do |t|
       t.string :title, null: false
-      t.inter :year
+      t.integer :year
       t.string :actors
       t.string :runtime
       t.string :plot
