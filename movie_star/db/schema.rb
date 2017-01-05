@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20170105163503) do
     t.string   "title",                                                                                         null: false
     t.integer  "year"
     t.string   "actors"
-    t.integer  "runtime"
+    t.string   "runtime"
     t.string   "plot"
     t.integer  "category_id"
     t.datetime "created_at",                                                                                    null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20170105163503) do
   end
 
   create_table "ratings", force: :cascade do |t|
-    t.string   "score",      null: false
+    t.integer  "score",      null: false
     t.integer  "rater_id",   null: false
     t.integer  "review_id",  null: false
     t.datetime "created_at", null: false
