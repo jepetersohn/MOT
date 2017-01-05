@@ -19,5 +19,17 @@
     <p><%= review.body %></p>
     <p><%= review.reviewer.username %>  |  Average Rating: <%= review.ratings.average(:score).to_i %></p>
     <br>
+    <% if trusted_rater? %>
+      <%= form_tag("/reviews/#{review.id}/ratings", method: "post") do %>
+        <select>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <%= submit_tag("Submit Review") %>
+      <% end %>
+    <% end %>
   <% end %>
 </div>
