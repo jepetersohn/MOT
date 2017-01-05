@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
 
   def index
-    #@movies = Movie.all.sort.first(50)
+    @movies = Movie.all.sort.first(50)
   end
 
   def show
