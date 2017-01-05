@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 describe Review do
   let(:review) { Review.new(body: "Great film.", reviewer_id: nil, movie_id: 1) }
 
