@@ -9,6 +9,10 @@
   <img src=<%= @movie.img %>>
 </div>
 
+<% if trusted_reviewer? %>
+  <a href="/movies/<%= @movie.id %>/reviews/new">Review <%= @movie.title %></a>
+<% end %>
+
 <div id='review-list'>
   <h4>Reviews</h4>
   <% @reviews.each do |review| %>
