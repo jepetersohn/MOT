@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   validates :username, :email, :hashed_password, {presence: true}
   validates :username, :email, {uniqueness: true}
-  validate  :password_errors
+  # validate  :password_errors
 
   def password
     @password ||= Password.new(hashed_password)
