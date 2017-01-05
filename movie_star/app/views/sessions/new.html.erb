@@ -1,0 +1,16 @@
+<br>
+Enter your information to log in to your account
+
+<%= form_tag('/sessions', :action => "post") do %>
+
+  <%= label_tag :user, 'Username: ' %><br>
+  <%= text_field_tag :user %><br>
+
+  <%= label_tag :password, 'Password: ' %><br>
+  <%= password_field_tag :password %><br>
+
+  <%= submit_tag 'Login' %>
+
+<% end %>
+
+

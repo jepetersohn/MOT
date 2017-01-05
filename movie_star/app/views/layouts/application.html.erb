@@ -21,8 +21,12 @@
     <div class="nav-container">
       <nav id="nav-links">
         <a><%= link_to 'home', movies_path %></a>
+      <% if !logged_in?%>
         <a><%= link_to 'register' %></a>
-        <a><%= link_to 'login' %></a>
+        <a><%= link_to 'login', sessions_new_path %></a>
+      <% else %>
+        <a><%= link_to 'logout', sessions_destroy_path %></a>
+      <% end %>
       </nav>
     </div>
 
