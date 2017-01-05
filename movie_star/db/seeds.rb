@@ -326,18 +326,18 @@ end
 #     img: "https://images-na.ssl-images-amazon.com/images/M/MV5BNTc0ZDk1YWItZDZiNi00NTdmLWE0MDctNTVhYTRhMDBmZjNjXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg"
 #   )
 
-# 100.times do
-#   Review.create(
-#     body: Faker::Hipster.sentence,
-#     reviewer_id: rand(6..8),
-#     movie_id: rand(1..10)
-#   )
-# end
+100.times do
+  Review.create(
+    body: Faker::Hipster.sentence,
+    reviewer_id: rand(6..8),
+    movie_id: rand(1..10)
+  )
+end
 
-# 125.times do
-#   Rating.create(
-#     score: rand(1..5),
-#     rater_id: rand(1..5),
-#     review_id: rand(1..100)
-#   )
-# end
+125.times do
+  Rating.create(
+    score: rand(1..5),
+    rater_id: rand(1..5),
+    review_id: rand(1..100)
+  )
+end
