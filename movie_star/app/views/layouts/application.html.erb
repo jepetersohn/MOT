@@ -6,7 +6,29 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+
+ <div class="header-container">
+  <header class="hide shadow">
+
+
+    <p id="header">The Unexpected Virtue of Loving Film</p>
+    <div class="title">
+      <h1 class='title-header'>MovieStar</h1>
+    </div>
+
+    <div class="nav-container">
+      <nav id="nav-links">
+        <a href="/">home</a>
+        <a id="resume-link" href="/">register</a>
+        <a href="/">login</a>
+      </nav>
+    </div>
+
+  </header>
+</div>
+
 
 <%= yield %>
 
