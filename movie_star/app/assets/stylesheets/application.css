@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One|Ultra');
 @import url('https://fonts.googleapis.com/css?family=Bungee|Josefin+Slab');
 
-/*.flex-container {
-    background: #2C414E;
+.flex-container {
   padding: 0;
-  margin: 0;
-  list-style: none;
+  margin-top: 25px;
 
   display: -webkit-box;
   display: -moz-box;
@@ -14,17 +12,35 @@
   display: flex;
 
   -webkit-flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .flex-item {
-  padding: 5px;
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  line-height: 300px;
-  color: white;
-  text-align: left;
+  padding-left: 20px;
+  line-height: 100px;
+  width: 20%;
+  height: 10%;
+  margin-top: 5px;
+  color: black;
+}
+
+.film-header {
+  height: 75px;
+  border-bottom: 1px solid black;
+}
+
+.top-film-header {
+  font-family: 'Poiret One', cursive;
+  font-size: 30px;
+  text-align: center;
+}
+
+.movie-icon {
+  opacity: 0.9;
+}
+
+.movie-icon:hover {
+  opacity: 1;
 }
 
 .main {
@@ -36,13 +52,14 @@
   color: #DAF7A6;
   font-family: 'Poiret One', cursive;
   font-size: 18px;
-}*/
+}
 
 .shadow {
   -webkit-box-shadow: 0 5px 4px -4px black;
      -moz-box-shadow: 0 5px 4px -4px black;
           box-shadow: 0 5px 4px -4px black;
 }
+
 
 header.hide {
   font-family: 'Poiret One', cursive;
