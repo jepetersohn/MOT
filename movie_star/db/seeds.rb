@@ -289,6 +289,7 @@ movie_list.each do |title|
   uri = URI.parse("http://www.omdbapi.com/?t=#{title}&y=&plot=full&r=json")
   movie_info = Net::HTTP.get_response(uri)
     parsed_info = JSON.parse(movie_info.body)
+
     Movie.create(
       title: parsed_info["Title"],
       year: parsed_info["Year"].to_i,
