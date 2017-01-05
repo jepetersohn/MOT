@@ -1,1 +1,10 @@
 This page will contain all of the contents for its movie (name, desc, etc)
+<div id='movie-info'>
+	<h2><%= @movie.title %></h2>
+	<% if @movie.category %>
+		<p><%= @movie.category.genre %></p>
+	<% end %>
+	<p>Year: <%= @movie.year %> | Runtime: <%= @movie.runtime %> mins</p>
+	<p>Notable Actors: <%= @movie.actors %></p>
+	<p><%= @movie.plot %></p>
+</div>

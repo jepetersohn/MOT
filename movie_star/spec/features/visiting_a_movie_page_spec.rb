@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature "visiting a movie page" do 
-	xscenario "the user sees a movie's information" do 
+	scenario "the user sees a movie's information" do 
 		current_movie = Movie.first
 
 		visit '/movies/1'
