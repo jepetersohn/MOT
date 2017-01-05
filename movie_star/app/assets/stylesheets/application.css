@@ -134,16 +134,19 @@ h1.title-header {
 .reviews-banner {
   margin-top: -35px;
   background-color: #900C3F;
-  height: 100px;
+  height: 80px;
 
 }
 
 .reviews-title {
+  height: 30px;
+  width: 150px;
+  background: #47061F;
   font-family: 'Bungee', cursive;
   font-size: 30px;
   color: white;
   margin-left: 50px;
-  padding-top: 30px;
+  padding: 5px;
 }
 
 .movie-show-container {
