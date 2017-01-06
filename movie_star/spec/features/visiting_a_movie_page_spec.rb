@@ -16,7 +16,7 @@ feature "visiting a movie page" do
 		expect(page).to have_current_path movie_path(current_movie)
 	end
 
-	scenario "the user sees all revies for the given movie" do
+	scenario "the user sees all reviews for the given movie" do
 		current_movie = Movie.first
 		review = current_movie.reviews.first
 
