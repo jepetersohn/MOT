@@ -1,17 +1,21 @@
 class ReviewsController < ApplicationController
 
-  def new
-    @review = Review.new
+  def index
+    @reviews = Review.all.order(created_at: :desc)
   end
 
+  def new
+    @movie = Movie.find_by(id: params[:movie_id])
+    @review = Review.new
+  end
 
   def create
     @movie = Movie.find_by(id: params[:movie_id])
     movie_id = params[:movie_id]
     @review = Review.new(review_params)
+    @review.reviewer_id = current_user.id
+    @review.movie_id = movie_id
     if has_not_reviewed?(movie_id)
-      @review.reviewer_id = current_user.id
-      @review.movie_id = movie_id
       if @review.save
         render template: 'movies/show'
       else
