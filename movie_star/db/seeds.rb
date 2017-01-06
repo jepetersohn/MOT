@@ -254,7 +254,7 @@ movie_list = ["The+Shawshank+Redemption",
   User.create(
     username: Faker::Internet.user_name,
     email: Faker::Internet.email,
-    hashed_password: 'password',
+    password: 'password',
     trusted_reviewer: false
   )
 end
@@ -263,7 +263,7 @@ end
   User.create(
     username: Faker::Internet.user_name,
     email: Faker::Internet.email,
-    hashed_password: 'password',
+    password: 'password',
     trusted_reviewer: true
   )
 end

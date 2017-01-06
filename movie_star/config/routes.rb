@@ -5,6 +5,13 @@ Rails.application.routes.draw do
     resources :reviews
   end
   resources :users
+
+  # get 'login', to: 'sessions#new', as: 'login'
+  # get 'logout', to: 'sessions#destroy', as: 'logout'
+  get "sessions/new", :to => "sessions#new"
+  post "sessions", :to => "sessions#create"
+  delete "sessions", :to => "sessions#destroy", as: "logout"
+
   post 'reviews/:id/ratings' => 'ratings#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
