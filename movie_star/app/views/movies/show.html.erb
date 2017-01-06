@@ -14,23 +14,26 @@
   </div>
 
 </div>
-<% if @errors %>
-  <% @errors.each do |error| %>
-  <%= error %>
-  <% end %>
-<% end %>
-<br>
-<% if trusted_reviewer? %>
-  <a href="/movies/<%= @movie.id %>/reviews/new">Review <%= @movie.title %></a>
-<% end %>
-<br>
-<br>
+
 
 <div class="reviews-banner shadow">
   <p class="reviews-title">Reviews</p>
 </div>
 
 <div class="reviews-container">
+  <% if @errors %>
+    <% @errors.each do |error| %>
+    <%= error %>
+    <% end %>
+  <% end %>
+
+  <% if trusted_reviewer? %>
+    <a id="review-button" class="write-review" href="/movies/<%= @movie.id %>/reviews/new">review</a>
+
+    <div class="review-form"></div>
+
+  <% end %>
+
   <div id='review-list'>
     <% @movie.reviews.each do |review| %>
     <div class="review-container">
