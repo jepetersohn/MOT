@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post "sessions", :to => "sessions#create"
   delete "sessions", :to => "sessions#destroy", as: "logout"
 
+  get 'reviews' => 'reviews#index'
   post 'reviews/:id/ratings' => 'ratings#create'
 
   # The priority is based upon order of creation: first created -> highest priority.

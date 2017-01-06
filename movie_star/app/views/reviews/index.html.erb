@@ -1,0 +1,17 @@
+<div class="film-header shadow">
+  <p class="top-film-header">All reviews</p>
+</div>
+
+  <% @reviews.each do |review| %>
+    <b><%=review.movie.title%></b>
+    <br>
+    Reviewed at: <%=review.created_at%>
+    <br>
+    Reviewer: <%=review.reviewer.username%>
+    <br>
+    <%=review.body%>
+    <br>
+
+  <% end %>
+
+
