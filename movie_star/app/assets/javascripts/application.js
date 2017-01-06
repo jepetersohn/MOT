@@ -14,3 +14,22 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+
+  $('.write-review').on('click', function(event){
+    event.preventDefault();
+    var that = this
+    var url = $(this).attr('href');
+
+    // $('.review-form').show();
+    $.ajax({
+      method: 'GET',
+      url: url
+    }).done(function(response){
+      // console.log(response);
+      $('.review-form').append(response);
+      $(that).hide();
+    });
+  })
+});

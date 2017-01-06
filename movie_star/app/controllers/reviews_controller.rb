@@ -2,6 +2,13 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+
+    if request.xhr?
+      @review
+      render :'/reviews/_form', layout: false
+    else
+      @review
+    end
   end
 
 

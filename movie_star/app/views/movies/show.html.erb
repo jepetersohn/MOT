@@ -16,15 +16,20 @@
 
 </div>
 
-<% if trusted_reviewer? %>
-  <a href="/movies/<%= @movie.id %>/reviews/new">Review <%= @movie.title %></a>
-<% end %>
 
 <div class="reviews-banner shadow">
   <p class="reviews-title">Reviews</p>
 </div>
 
 <div class="reviews-container">
+
+  <% if trusted_reviewer? %>
+    <a class="write-review" href="/movies/<%= @movie.id %>/reviews/new">write a review</a>
+
+    <div class="review-form"></div>
+
+  <% end %>
+
   <div id='review-list'>
     <% @reviews.each do |review| %>
     <div class="review-container">
