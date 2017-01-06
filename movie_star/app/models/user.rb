@@ -7,26 +7,37 @@ class User < ActiveRecord::Base
 
   validates :username, :email, :hashed_password, {presence: true}
   validates :username, :email, {uniqueness: true}
-  # validate  :password_errors
+  validate  :password_errors
+  validate  :valid_email
 
   def password
     @password ||= Password.new(hashed_password)
   end
 
   def password=(new_password)
-    # @raw_password = new_password
+    @raw_password = new_password
     @password = Password.create(new_password)
     self.hashed_password = @password
   end
 
-   # def password_errors
-   #   if @raw_password.length < 5
-   #     errors.add(:password, "Password must be at least 5 characters")
-   #   end
-   # end
+   def password_errors
+     if @raw_password.length < 5
+       errors.add(:password, "Password must be at least 5 characters")
+     end
+   end
 
-   def authenticate(password)
+  def authenticate(password)
     self.password == password
   end
+
+  def valid_email
+    if :email =~ (/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i)
+      true
+    else
+      errors.add(:email, "This is not a valid email address")
+    end
+  end
+
+
 
 end
