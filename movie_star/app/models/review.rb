@@ -3,8 +3,6 @@ class Review < ActiveRecord::Base
   belongs_to :reviewer, class_name: "User"
   has_many   :ratings
 
-  scope :newest_first, order(created_at: :desc)
-
   def average_rating
     self.ratings.average(:score).to_i
   end
