@@ -250,19 +250,19 @@ movie_list = ["The+Shawshank+Redemption",
 "The+Help",
 "The+Imitation+Game"]
 
-User.create(
-    username: not_trusted,
-    email: not_trusted@nottrusted.com,
-    password: 'password',
-    trusted_reviewer: false
-  )
+# User.create(
+#     username: not_trusted,
+#     email: not_trusted@nottrusted.com,
+#     password: 'password',
+#     trusted_reviewer: false
+#   )
 
-User.create(
-    username: test_user,
-    email: test_user@test.com,
-    password: 'password',
-    trusted_reviewer: true
-  )
+# User.create(
+#     username: test_user,
+#     email: test_user@test.com,
+#     password: 'password',
+#     trusted_reviewer: true
+#   )
 
 categories = ['Horror', 'Drama', 'Comedy', 'Sci-Fi', 'Suspense']
 
