@@ -1,9 +1,7 @@
 class SessionsController < ApplicationController
 
   def create
-    p "HELLO WORLD!"
     @user = User.find_by(:username => params[:session][:username])
-    @user
       if @user && @user.authenticate(params[:session][:password])
         session[:user_id] = @user.id
         redirect_to root_url, notice: "Logged in!"
@@ -20,7 +18,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to :action => 'sessions#new'
+    redirect_to :action => 'new'
   end
 
 end

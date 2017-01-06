@@ -8,13 +8,9 @@ Rails.application.routes.draw do
   # get 'logout', to: 'sessions#destroy', as: 'logout'
   get "sessions/new", :to => "sessions#new"
   post "sessions", :to => "sessions#create"
-  delete "sessions", :to => "sessions#destroy"
+  delete "sessions", :to => "sessions#destroy", as: "logout"
   post 'reviews/:id/ratings' => 'ratings#create'
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> master
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
