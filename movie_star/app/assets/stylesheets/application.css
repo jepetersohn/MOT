@@ -185,7 +185,7 @@ h1.title-header {
   position: relative;
   top: 30%;
   left: 50%;
-  width: 300px;
+  width: 100%;
   padding: 5px;
   transform: translate(-50%, -50%);
   color: white;
