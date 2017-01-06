@@ -3,7 +3,7 @@
 </div>
 
   <% @reviews.each do |review| %>
-    <b><%=review.movie.title%></b>
+    <a href="movies/<%=review.movie.id%>"><b><%=review.movie.title%></b></a>
     <br>
     Reviewed at: <%=review.created_at%>
     <br>
