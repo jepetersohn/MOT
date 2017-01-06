@@ -16,7 +16,7 @@ describe Movie do
   end
 
   it "should have a runtime" do
-    expect(movie.runtime).to eq 189
+    expect(movie.runtime).to eq "189"
   end
 
   it "should have a plot" do
