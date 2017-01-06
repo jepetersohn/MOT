@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
           @review
           render :'/movies/_display_review', layout: false
         else
-          status 404
+          redirect_to "/movies/#{params[:movie_id]}"
         end
       else
         if request.xhr?
