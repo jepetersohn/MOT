@@ -6,14 +6,28 @@ class ReviewsController < ApplicationController
 
 
   def create
-    if has_not_reviewed?
-      @review = Review.new(body: params[:body], movie_id: params[:id], reviewer_id: current_user.id)
+    @movie = Movie.find_by(id: params[:movie_id])
+    movie_id = params[:movie_id]
+    @review = Review.new(review_params)
+    if has_not_reviewed?(movie_id)
+      @review.reviewer_id = current_user.id
+      @review.movie_id = movie_id
       if @review.save
-        redirect_to "movie_path"
+        render template: 'movies/show'
+      else
+        @errors = ["Your review did not save, please try again."]
+        render 'new'
       end
     else
-      render 'movies#show'
+      @errors = ["You have already reviewed this."]
+      render template: 'movies/show'
     end
+  end
+
+  private
+
+  def review_params
+    params.require(:review).permit(:body, :reviewer_id, :movie_id)
   end
 
 
