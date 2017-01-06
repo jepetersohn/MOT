@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
   validates :username, :email, :hashed_password, {presence: true}
   validates :username, :email, {uniqueness: true}
   validate  :password_errors
-  # validate  :valid_email
 
   def password
     @password ||= Password.new(hashed_password)
@@ -29,15 +28,5 @@ class User < ActiveRecord::Base
   def authenticate(password)
     self.password == password
   end
-
-  # def valid_email
-  #   if :email =~ /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-
-  #     true
-  #   else
-  #     errors.add(:email, "This is not a valid email address")
-  #   end
-  # end
-
 
 end
