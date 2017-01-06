@@ -15,9 +15,9 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
 
-  $('.reviews-container').on('click', '.write-review', function(event){
+  $('.write-review').on('click', function(event){
     event.preventDefault();
     var that = this
     var url = $(this).attr('href');

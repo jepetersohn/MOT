@@ -27,7 +27,7 @@
   <% end %>
 
   <% if trusted_reviewer? %>
-    <a class="write-review" href="/movies/<%= @movie.id %>/reviews/new">write a review</a>
+    <a id="review-button" class="write-review" href="/movies/<%= @movie.id %>/reviews/new">review</a>
 
     <div class="review-form"></div>
 
