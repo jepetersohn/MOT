@@ -7,11 +7,11 @@ module SessionHelper
   end
 
   def trusted_reviewer?
-    # user = User.find_by(id: session[:user_id])
-    current_user.trusted_reviewer
-    # if user
-    #   return true if user.trusted_reviewer == true
-    # end
+    user = User.find_by(id: session[:user_id])
+    # current_user.trusted_reviewer
+    if user
+      return true if user.trusted_reviewer == true
+    end
   end
 
   def trusted_rater?
