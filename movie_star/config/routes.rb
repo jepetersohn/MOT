@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "movies#index"
   resources :movies
 
-  post 'reviews/:id/ratings' => 'rating#create'
+  post 'reviews/:id/ratings' => 'ratings#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
