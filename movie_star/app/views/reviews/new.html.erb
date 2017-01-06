@@ -21,6 +21,12 @@
 <br>
 <%= form_for :review, url: movie_reviews_path, method: :post do |f| %>
 Enter your review below:<br /><br />
+<% if @errors %>
+  <% @errors.each do |e| %>
+    <%= e %>
+    <% end %>
+  <% end %>
+
 <%= f.text_area(:body, size: '100x20') %><br />
 <%= f.submit %>
 <% end %>

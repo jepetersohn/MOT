@@ -15,10 +15,17 @@
 
 
 </div>
-
+<% if @errors %>
+  <% @errors.each do |error| %>
+  <%= error %>
+  <% end %>
+<% end %>
+<br>
 <% if trusted_reviewer? %>
   <a href="/movies/<%= @movie.id %>/reviews/new">Review <%= @movie.title %></a>
 <% end %>
+<br>
+<br>
 
 <div class="reviews-banner shadow">
   <p class="reviews-title">Reviews</p>
@@ -26,7 +33,7 @@
 
 <div class="reviews-container">
   <div id='review-list'>
-    <% @reviews.each do |review| %>
+    <% @movie.reviews.each do |review| %>
     <div class="review-container">
       <p><%= review.body %></p>
       <p><%= review.reviewer.username %>  |  <%= review.display_rating %></p>
