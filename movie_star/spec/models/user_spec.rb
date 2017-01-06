@@ -7,7 +7,7 @@ describe User do
     expect(user.username).to eq "movielover"
   end
 
-   it "should have an email" do
+  it "should have an email" do
     expect(user.email).to eq "jk1@gmail.com"
   end
 
