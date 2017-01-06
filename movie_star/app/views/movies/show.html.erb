@@ -37,7 +37,7 @@
       <p><%= review.body %></p>
       <p><%= review.reviewer.username %>  |  <%= review.display_rating %></p>
       <br>
-      <% if trusted_rater? %>
+      <% if trusted_rater? && has_not_rated?(review.id) %>
         <%= form_tag("/reviews/#{review.id}/ratings", method: "post") do %>
           <select name="rating">
             <option value="1">1</option>
