@@ -1,0 +1,13 @@
+<div>
+<br>
+<br>
+<%= form_for :user, url: users_path, method: :post do |f| %>
+Please Choose a <%= f.label :username %>
+<%= f.text_field :username %><br />
+Please Enter Your <%= f.label :email %>
+<%= f.text_field :email %><br />
+Please Choose a <%= f.label :password %>
+<%= f.password_field :password %>
+<%= f.submit %>
+<% end %>
+</div>

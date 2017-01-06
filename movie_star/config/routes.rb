@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root to: "movies#index"
   resources :movies
+  resources :users
 
   # get 'login', to: 'sessions#new', as: 'login'
   # get 'logout', to: 'sessions#destroy', as: 'logout'
@@ -9,7 +10,11 @@ Rails.application.routes.draw do
   post "sessions", :to => "sessions#create"
   delete "sessions", :to => "sessions#destroy"
   post 'reviews/:id/ratings' => 'ratings#create'
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> master
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
