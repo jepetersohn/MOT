@@ -29,7 +29,7 @@
     <% @reviews.each do |review| %>
     <div class="review-container">
       <p><%= review.body %></p>
-      <p><%= review.reviewer.username %>  |  Average Rating: <%= review.ratings.average(:score).to_i %></p>
+      <p><%= review.reviewer.username %>  |  <%= review.display_rating %></p>
       <br>
       <% if trusted_rater? %>
         <%= form_tag("/reviews/#{review.id}/ratings", method: "post") do %>
