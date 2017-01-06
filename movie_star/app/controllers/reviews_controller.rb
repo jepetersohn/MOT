@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
           @review
           render :'/movies/_display_review', layout: false
         else
-          status 404
+          render template: 'movies/show'
         end
       else
         if request.xhr?
