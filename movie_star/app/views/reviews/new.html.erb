@@ -1,0 +1,9 @@
+<div>
+<br>
+<br>
+<%= form_for :review, url: movie_reviews_path, method: :post do |f| %>
+Enter your review below:<br /><br />
+<%= f.text_area(:body, size: '100x20') %><br />
+<%= f.submit %>
+<% end %>
+</div>
