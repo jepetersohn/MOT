@@ -2,14 +2,13 @@ module SessionHelper
   def trusted_reviewer(auth_key)
     if auth_key == "987654321"
       current_user.trusted_reviewer = true
-      current_user.update(trusted_reviewer: true)
     end
   end
 
   def trusted_reviewer?
     # user = User.find_by(id: session[:user_id])
     if active_session?
-      current_user.trusted_reviewer
+      return true if current_user.trusted_reviewer = true
     end
     # if user
     #   return true if user.trusted_reviewer == true
