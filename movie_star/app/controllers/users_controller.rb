@@ -19,6 +19,7 @@ class UsersController < ApplicationController
       end
       redirect_to '/'
     else
+      @errors = @user.errors.full_messages
       render 'new'
     end
   end
