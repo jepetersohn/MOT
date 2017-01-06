@@ -24,16 +24,27 @@ class ReviewsController < ApplicationController
     @review.movie_id = movie_id
     if has_not_reviewed?(movie_id)
       if @review.save
-        render template: 'movies/show'
+        if request.xhr?
+          @review
+          render :'/movies/_display_review', layout: false
+        else
+          status 404
+        end
       else
-        @errors = ["Your review did not save, please try again."]
-        render 'new'
+        if request.xhr?
+          status 404
+        else
+          @errors = ["Your review did not save, please try again."]
+          render 'new'
+        end
       end
     else
       @errors = ["You have already reviewed this."]
       render template: 'movies/show'
     end
   end
+
+  # render template: 'movies/show'
 
   private
 

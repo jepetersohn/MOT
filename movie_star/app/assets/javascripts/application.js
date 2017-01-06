@@ -17,7 +17,7 @@
 
 $(document).ready(function(){
 
-  $('.write-review').on('click', function(event){
+  $('.reviews-container').on('click', '.write-review', function(event){
     event.preventDefault();
     var that = this
     var url = $(this).attr('href');
@@ -27,9 +27,24 @@ $(document).ready(function(){
       method: 'GET',
       url: url
     }).done(function(response){
-      // console.log(response);
       $('.review-form').append(response);
       $(that).hide();
     });
+  })
+  $('.reviews-container').on('submit', '.review-form', function(event){
+    event.preventDefault();
+
+    var form = $(this).find('form');
+    var url = $(form).attr('action');
+    var paramData = $(form).serialize();
+
+    $.ajax({
+      method: 'POST',
+      url: url,
+      data: paramData
+    }).done(function(response){
+      $('#review-list').prepend(response);
+      $('.review-form').hide();
+    })
   })
 });
