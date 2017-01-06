@@ -21,6 +21,7 @@
     <div class="nav-container">
       <nav id="nav-links">
         <a><%= link_to 'home', movies_path %></a>
+        <a><%= link_to 'all reviews', reviews_path %>
       <% if !logged_in?%>
         <a><%= link_to 'register', new_user_path %></a>
         <a><%= link_to 'login', sessions_new_path %></a>

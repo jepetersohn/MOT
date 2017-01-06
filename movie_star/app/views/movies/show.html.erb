@@ -12,8 +12,6 @@
       <img src=<%= @movie.img %>>
     </div>
   </div>
-
-
 </div>
 
 
@@ -22,6 +20,11 @@
 </div>
 
 <div class="reviews-container">
+  <% if @errors %>
+    <% @errors.each do |error| %>
+    <%= error %>
+    <% end %>
+  <% end %>
 
   <% if trusted_reviewer? %>
     <a class="write-review" href="/movies/<%= @movie.id %>/reviews/new">write a review</a>
@@ -31,7 +34,7 @@
   <% end %>
 
   <div id='review-list'>
-    <% @reviews.each do |review| %>
+    <% @movie.reviews.each do |review| %>
     <div class="review-container">
       <p><%= review.body %></p>
       <p><%= review.reviewer.username %>  |  <%= review.display_rating %></p>
