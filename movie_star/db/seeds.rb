@@ -289,6 +289,7 @@ movie_list.each do |title|
   uri = URI.parse("http://www.omdbapi.com/?t=#{title}&y=&plot=full&r=json")
   movie_info = Net::HTTP.get_response(uri)
     parsed_info = JSON.parse(movie_info.body)
+
     Movie.create(
       title: parsed_info["Title"],
       year: parsed_info["Year"].to_i,
@@ -326,18 +327,18 @@ end
 #     img: "https://images-na.ssl-images-amazon.com/images/M/MV5BNTc0ZDk1YWItZDZiNi00NTdmLWE0MDctNTVhYTRhMDBmZjNjXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg"
 #   )
 
-# 100.times do
-#   Review.create(
-#     body: Faker::Hipster.sentence,
-#     reviewer_id: rand(6..8),
-#     movie_id: rand(1..10)
-#   )
-# end
+100.times do
+  Review.create(
+    body: Faker::Hipster.sentence,
+    reviewer_id: rand(6..8),
+    movie_id: rand(1..10)
+  )
+end
 
-# 125.times do
-#   Rating.create(
-#     score: rand(1..5),
-#     rater_id: rand(1..5),
-#     review_id: rand(1..100)
-#   )
-# end
+125.times do
+  Rating.create(
+    score: rand(1..5),
+    rater_id: rand(1..5),
+    review_id: rand(1..100)
+  )
+end
