@@ -250,40 +250,25 @@ movie_list = ["The+Shawshank+Redemption",
 "The+Help",
 "The+Imitation+Game"]
 
-5.times do
-  User.create(
-    username: Faker::Internet.user_name,
-    email: Faker::Internet.email,
-    password: 'password',
-    trusted_reviewer: false
-  )
-end
+# User.create(
+#     username: not_trusted,
+#     email: not_trusted@nottrusted.com,
+#     password: 'password',
+#     trusted_reviewer: false
+#   )
 
-3.times do
-  User.create(
-    username: Faker::Internet.user_name,
-    email: Faker::Internet.email,
-    password: 'password',
-    trusted_reviewer: true
-  )
-end
+# User.create(
+#     username: test_user,
+#     email: test_user@test.com,
+#     password: 'password',
+#     trusted_reviewer: true
+#   )
 
 categories = ['Horror', 'Drama', 'Comedy', 'Sci-Fi', 'Suspense']
 
 categories.each do |category|
   Category.create(genre: category)
 end
-
-#10.times do
-  #Restaurant.create(
-    #name: Faker::StarWars.vehicle.to_s + " " + ['Cafe', 'Diner', 'Dive', 'Steakhouse', 'Bistro'].sample,
-    #planet: Faker::StarWars.planet,
-    #city: Faker::Pokemon.location,
-    #food: ['Comfort', 'Fine Dining', 'BBQ', 'Sushi', 'Italian', 'Farm to Table'].sample,
-    #admin_id: rand(1..5),
-  #)
-#end
-# actors = ['Tom Hanks', 'Tom Cruise', 'Matthew Broderick', 'Cillian Murphy', 'Naomie Harris']
 
 movie_list.each do |title|
   uri = URI.parse("http://www.omdbapi.com/?t=#{title}&y=&plot=full&r=json")
@@ -305,40 +290,18 @@ end
 
 
 
-# Movie.create(
-#     title: "The Shawshank Redemption",
-#     year: 1999,
-#     actors: actors.sample,
-#     runtime: 90,
-#     plot: Faker::Hipster.sentence,
-#     category_id: rand(1..10),
-#     url: "http://www.omdbapi.com/?t=the+shawshank+redemption&y=1994&plot=full&r=json",
-#     img: "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX300.jpg"
+# 100.times do
+#   Review.create(
+#     body: Faker::Hipster.sentence,
+#     reviewer_id: rand(6..8),
+#     movie_id: rand(1..10)
 #   )
+# end
 
-# Movie.create(
-#     title: "The God Father",
-#     year: 1994,
-#     actors: actors.sample,
-#     runtime: 90,
-#     plot: Faker::Hipster.sentence,
-#     category_id: rand(1..10),
-#     url: "http://www.omdbapi.com/?t=godfather&y=1972&plot=full&r=json",
-#     img: "https://images-na.ssl-images-amazon.com/images/M/MV5BNTc0ZDk1YWItZDZiNi00NTdmLWE0MDctNTVhYTRhMDBmZjNjXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg"
+# 125.times do
+#   Rating.create(
+#     score: rand(1..5),
+#     rater_id: rand(1..5),
+#     review_id: rand(1..100)
 #   )
-
-100.times do
-  Review.create(
-    body: Faker::Hipster.sentence,
-    reviewer_id: rand(6..8),
-    movie_id: rand(1..10)
-  )
-end
-
-125.times do
-  Rating.create(
-    score: rand(1..5),
-    rater_id: rand(1..5),
-    review_id: rand(1..100)
-  )
-end
+# end
