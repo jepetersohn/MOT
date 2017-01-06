@@ -8,7 +8,11 @@ module SessionHelper
   end
 
   def trusted_rater?
-    return true if current_user.trusted_reviewer == false
+    if active_session?
+      return true if current_user.trusted_reviewer == false
+    else
+      nil
+    end
   end
 
   def current_user
