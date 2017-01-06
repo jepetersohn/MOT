@@ -219,6 +219,21 @@ nav#nav-links {
   opacity: 1;
   text-decoration: none;
 }
+
+#review-button {
+  color: #FFC300;
+  text-decoration: none;
+  font-family: 'Josefin Slab', serif;
+  background-color: #900C3F;
+  padding: 7px;
+  font-size: 18px;
+}
+
+#review-button:hover {
+  background-color: #FFC300;
+  color: #900C3F;
+}
+
 /*    <ul class="flex-container">
       <li class="flex-item">
         <span class="main">MovieStar</span>

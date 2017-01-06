@@ -30,15 +30,14 @@ class User < ActiveRecord::Base
     self.password == password
   end
 
-  def valid_email
-    if :email =~ /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  # def valid_email
+  #   if :email =~ /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
-      true
-    else
-      errors.add(:email, "This is not a valid email address")
-    end
-  end
-
+  #     true
+  #   else
+  #     errors.add(:email, "This is not a valid email address")
+  #   end
+  # end
 
 
 end
