@@ -27,7 +27,7 @@
     <% end %>
   <% end %>
 
-  <% if trusted_reviewer? %>
+  <% if trusted_reviewer? && has_not_reviewed?(@movie.id) %>
     <a id="review-button" class="write-review" href="/movies/<%= @movie.id %>/reviews/new">review</a>
 
     <div class="review-form"></div>
