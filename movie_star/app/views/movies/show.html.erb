@@ -1,14 +1,33 @@
-This page will contain all of the contents for its movie (name, desc, etc)
-<div id='movie-info'>
-	<h2><%= @movie.title %></h2>
-	<% if @movie.category %>
-		<p><%= @movie.category.genre %></p>
-	<% end %>
-	<p>Year: <%= @movie.year %> | Runtime: <%= @movie.runtime %> mins</p>
-	<p>Notable Actors: <%= @movie.actors %></p>
-	<p><%= @movie.plot %></p>
+<div class="movie-show-container shadow">
+
+  <div class="col" id='movie-info'>
+  	<p class="movie-title"><%= @movie.title %></p>
+  	<% if @movie.category %>
+  		<p><%= @movie.category.genre %></p>
+  	<% end %>
+  	<p class="movie-info-specifics">Year: <%= @movie.year %>  |  Runtime: <%= @movie.runtime %></p>
+  	<p>Notable Actors: <%= @movie.actors %></p>
+  	<p><%= @movie.plot %></p>
+    <div class="movie-info-right">
+      <img src=<%= @movie.img %>>
+    </div>
+  </div>
+
+
 </div>
 
-<div id='review-list'>
-  <h4>Reviews</h4>
+<div class="reviews-banner shadow">
+  <p class="reviews-title">Reviews</p>
+</div>
+
+<div class="reviews-container">
+  <div id='review-list'>
+    <% @reviews.each do |review| %>
+    <div class="review-container">
+      <p><%= review.body %></p>
+      <p><%= review.reviewer.username %>  |  Average Rating: <%= review.ratings.average(:score).to_i %></p>
+      <br>
+    </div>
+    <% end %>
+  </div>
 </div>

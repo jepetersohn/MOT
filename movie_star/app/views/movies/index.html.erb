@@ -1,12 +1,17 @@
-<h1>Top 50 Films</h1>
+<div class="film-header shadow">
+  <p class="top-film-header">Top 50 Films</p>
+</div>
 
-<ul>
+<div class="flex-container">
+
   <% @movies.each do |movie| %>
-    <li><%=movie.title%></li>
-    <a href = "<%=movie.url%>">
-    <img src="<%=movie.img%>" alt = "<%=movie.title%>" style="width:182px;height:268px;border:0;">
+  <div class="flex-item">
+    <a class="movie-icon shadow" href="movies/<%=movie.id%>">
+      <img class="movie-icon" src="<%=movie.img%>" alt = "<%=movie.title%>" style="width:182px;height:268px;border:0;">
     </a>
+  </div>
   <% end %>
-</ul>
+
+</div>
 
 
