@@ -1,9 +1,13 @@
 class ReviewsController < ApplicationController
 
+  def index
+    # @reviews = Review.all.order(created_at: :desc)
+    @reviews = Review.newest_first
+  end
+
   def new
     @review = Review.new
   end
-
 
   def create
     if has_not_reviewed?
