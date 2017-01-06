@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "sessions/new", :to => "sessions#new"
   post "sessions", :to => "movies#index"
   delete "sessions", :to => "sessions#destroy"
-
+  post 'reviews/:id/ratings' => 'ratings#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
