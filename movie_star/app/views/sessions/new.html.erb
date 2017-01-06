@@ -1,16 +1,23 @@
 <br>
-Enter your information to log in to your account
+<b>Enter your information to log in to your account</b>
+<br>
+<br>
 
-<%= form_tag('/sessions', :action => "post") do %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:session, url: sessions_path) do |f| %>
 
-  <%= label_tag :user, 'Username: ' %><br>
-  <%= text_field_tag :user %><br>
+      <%= f.label :username %>
+      <%= f.text_field :username, class: 'form-control' %>
 
-  <%= label_tag :password, 'Password: ' %><br>
-  <%= password_field_tag :password %><br>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
 
-  <%= submit_tag 'Login' %>
+      <%= f.submit "Log in", class: "btn btn-primary" %>
+    <% end %>
 
-<% end %>
+
+  </div>
+</div>
 
 

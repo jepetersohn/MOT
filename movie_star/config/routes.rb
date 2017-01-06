@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # get 'login', to: 'sessions#new', as: 'login'
   # get 'logout', to: 'sessions#destroy', as: 'logout'
   get "sessions/new", :to => "sessions#new"
-  post "sessions", :to => "movies#index"
+  post "sessions", :to => "sessions#create"
   delete "sessions", :to => "sessions#destroy"
   post 'reviews/:id/ratings' => 'ratings#create'
 
