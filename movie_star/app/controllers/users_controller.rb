@@ -9,7 +9,14 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    auth_key = params[:user][:trusted_reviewer]
+    p auth_key
     if @user.save
+      session[:user_id] = @user.id
+      current_user
+      if auth_key != nil
+        p trusted_reviewer(auth_key)
+      end
       redirect_to '/'
     else
       render 'new'
