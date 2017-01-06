@@ -12,8 +12,7 @@ class Review < ActiveRecord::Base
   def display_rating
     ratings = []
     star = "\u2B50"
-    p star.encode('utf-8')
-
+    star.encode('utf-8')
     self.average_rating.times do
       ratings << star.encode('utf-8')
     end
