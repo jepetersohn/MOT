@@ -1,8 +1,7 @@
-# dbc_client_project
+# MovieStar - https://moviestarreviews.herokuapp.com/movies
 Dev Bootcamp client project for movie reviews web app
 
-team name: Adventure Time
-team members: Joan Petersohn, Waleeta Canon, Justin Frederick, Dennis Marchetti
+Joan Petersohn, Waleeta Canon, Justin Frederick, Dennis Marchetti
 
 user stories:
 
@@ -13,4 +12,7 @@ user stories:
   - users can view a movie and all its reviews
   - users can view all movies on the homepage
   - users can rate reviews
+  
+![image](https://cloud.githubusercontent.com/assets/19498387/23670876/d0d9bada-032e-11e7-996e-e3985a5f7c53.png)
 
+![image](https://cloud.githubusercontent.com/assets/19498387/23670893/e37002d0-032e-11e7-83fa-2bf5d4c335d0.png)
