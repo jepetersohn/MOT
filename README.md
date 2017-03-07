@@ -1,7 +1,7 @@
 # TV a la carte
 
 ## Description
-DevBootcamp Phase 2 solo assignment, built frontend and backend from scratch over the course of roughly 6 hours using Sinatra. Users can create accounts, securely login, subscribe/unsubscribe from individual cable channels, and keep track of their monthly bill. Each channel's show page lists its monthly price as well as an up-to-date count of the number of customers currently subscribed to the channel.
+DevBootcamp Phase 2 solo assignment, built front end and back ends from scratch with provided seed-data over the course of roughly 6 hours using Sinatra. Users can create accounts, securely login, subscribe/unsubscribe from individual cable channels, and keep track of their monthly bill. Each channel's show page lists its monthly price as well as an up-to-date count of the number of customers currently subscribed to the channel.
 
 List of all channels:
 ![image](https://cloud.githubusercontent.com/assets/19498387/23674055/29c35fa6-033a-11e7-84f1-d3a43d05c834.png)
