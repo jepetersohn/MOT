@@ -13,6 +13,8 @@ user stories:
   - users can view all movies on the homepage
   - users can rate reviews
   
+## Home page
 ![image](https://cloud.githubusercontent.com/assets/19498387/23670876/d0d9bada-032e-11e7-996e-e3985a5f7c53.png)
 
+## Movie show page
 ![image](https://cloud.githubusercontent.com/assets/19498387/23670893/e37002d0-032e-11e7-83fa-2bf5d4c335d0.png)
