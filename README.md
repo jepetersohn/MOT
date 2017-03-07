@@ -1,7 +1,7 @@
 # MovieStar - https://moviestarreviews.herokuapp.com/movies
-Dev Bootcamp client project for movie reviews web app
+Dev Bootcamp 2-day client project for movie reviews web app
 
-Joan Petersohn, Waleeta Canon, Justin Frederick, Dennis Marchetti
+Team members: Joan Petersohn, Waleeta Canon, Justin Frederick, Dennis Marchetti
 
 user stories:
 
@@ -18,3 +18,11 @@ user stories:
 
 ## Movie show page
 ![image](https://cloud.githubusercontent.com/assets/19498387/23670893/e37002d0-032e-11e7-83fa-2bf5d4c335d0.png)
+
+## Technologies used
+* (Unofficial) IMDB API
+* Ruby
+* Ruby on Rails
+* jQuery/AJAX
+* JavaScript
+* Turbolinks
