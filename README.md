@@ -5,7 +5,7 @@ Team members: Joan Petersohn, Waleeta Canon, Justin Frederick, Dennis Marchetti
 
 ### My responsibilities:
 
-My main role was learning how to utilize the IMDB API. I wrote a method to iterate through an array of movie titles, plugging each title into the API search functionality, and then parsed the JSON objects that were returned - creating movie-objects out of the data, storing them in our database, and displaying them properly formatted on the main page and on each movie's individual show page. 
+My main role was integrating the IMDB API. I wrote a method to iterate through an array of movie titles, plugging each title into the API search functionality, and then parsed the JSON objects that were returned - creating movie-objects out of the data, storing them in our database, and displaying them properly formatted on the main page and on each movie's individual show page. 
 
 ## user stories:
 
