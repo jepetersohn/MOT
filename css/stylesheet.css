@@ -1,11 +1,16 @@
 
 @font-face {
     font-family: FFCustom;
-    src: url("css/fonts/ffcustomfont.ttf");
+    src: url("fonts/ffcustomfont.ttf");
 }
 
 .leftmenu {
     font-family: FFCustom;
+}
+
+.mainbody{
+  border: 3px solid white;
+  width: 80.5%;
 }
 
 a {
