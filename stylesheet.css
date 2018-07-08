@@ -1,0 +1,53 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container > .left {
+  background: linear-gradient(to right, #0033cc 3%, #102372 55%);
+  /*background-color: #102372;*/
+  width: 900px;
+  height: 200px;
+  margin: 10px;
+  text-align: center;
+  font-size: 120px;
+  border: 3px solid white;
+  border-radius:2px;
+}
+
+.flex-container > .right {
+   background: linear-gradient(to right, #0033cc 3%, #102372 55%);
+  /*background-color: #102372;*/
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+  border: 3px solid white;
+  border-radius: 2px;
+}
+
+.flex-container > .leftmenu {
+  background: linear-gradient(to right, #0033cc 3%, #102372 55%);
+  /*background-color: #102372;*/
+  width: 200px;
+  height: 1500px;
+  margin: 10px;
+  text-align: left;
+  font-size: 20px;
+  border: 3px solid white;
+  border-radius: 2px;
+}
+
+.left {
+  text-align: center;
+  line-height: 200px;
+};
+
