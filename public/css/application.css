@@ -1,9 +1,26 @@
-html {
-  background-image: url("http://ministry127.com/sites/default/files/Television%20Viewing-background.jpg");
+@font-face {
+    font-family: PSPCustom;
+    src: url("PressStart2P-Regular.ttf") format("truetype");
+}
+
+.bluefade {
+  background: linear-gradient(to right top, #0033cc 3%, #102372 55%);
+  border: 3px solid white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+ul.nav-list li {
+  font-size:12px;
+}
+
+body {
+  background-color: black;
+  color: white;
 }
 
 h1 {
-  text-align: right;
+  text-align: center;
   margin-right:120px;
   color: white;
 }
@@ -20,14 +37,7 @@ li {
   color: white;
 }
 
-.container {
-  margin: 20px auto;
-  margin-left: 100px;
-  margin-bottom: 100px;
-  width: 700px;
-  height: 430px;
-  padding: 0px 20px 20px 20px;
-}
+
 
 .container h1 {
   font-size: 17pt;
@@ -40,14 +50,7 @@ nav {
   font-weight: bold;
 }
 
-nav .brand, nav .brand a {
-  margin-left: 25px;
-  font-size: 18pt;
-  text-decoration: none;
-  color: #444;
-  width: 60%;
-  display: inline-block;
-}
+
 
 nav ul {
   display: inline-block;
