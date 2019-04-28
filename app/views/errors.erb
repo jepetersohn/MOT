@@ -1,0 +1,9 @@
+<% if @errors %>
+  <% if @errors.any? %>
+    <h3>Oops there were some errors. Please try again:</h3>
+      <ul>
+       <% @errors.full_messages.each do |error| %>
+       <li><%= error %></li>
+       <% end %>
+  <% end %>
+<% end %>

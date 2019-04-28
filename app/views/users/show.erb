@@ -1,0 +1,31 @@
+<div id="channels">
+  <h2>Profile for <%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h2>
+  <hr>
+  <%if monthly_total != nil%>
+      <h3>Click on a channel to edit your subscription -
+      <br>
+        &emsp; &emsp;Your current lineup:
+         </h3>
+      <%@user.channels.each do |channel|%>
+        <a href="/channels/<%=channel.id%>">
+          <%=channel.name%> (<%=channel.callsign%>)
+        </a>
+        <br>
+        &emsp; &emsp; Monthly price:
+        $<%=channel.price_per_month%>
+        <br>
+        <br>
+      <%end%>
+    <br>
+
+    <hr>
+      Your total monthly bill: $<%=monthly_total%>
+  <%else%>
+    You are not currently subscribed to any channels.
+  <%end%>
+  <br>
+  <br>
+  <p>
+    <a href='/channels'>Add some channels to your lineup</a>
+  </p>
+</div>
